@@ -6,13 +6,13 @@ const FirstApp = ({title, sum}) => {
       <h1>{title}</h1>
       <span>{sum}</span>
     </>
-  );
+  ); 
 }
 
-// FirstApp.propTypes = {
-//   title : PropTyes.string.isRequired,
-//   sum : PropTyes.number.isRequired
-// }
+FirstApp.propTypes = {
+  title : PropTyes.string.isRequired,
+  sum : PropTyes.number.isRequired
+}
 
 FirstApp.defaultProps = {
   title: 'No hay titulo',
