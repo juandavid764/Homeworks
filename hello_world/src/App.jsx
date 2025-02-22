@@ -1,10 +1,10 @@
 import "./App.css";
-import FirstApp from  "./components/FirstApp";
+import {ComponentApp} from  "./components/ComponentApp";
 
 function App() {
   return (
     <>
-      <FirstApp title={"Este es mi titulo"} value={100}/>
+      <ComponentApp title={"Este es mi titulo"} value={100}/>
     </>
   );
 }
