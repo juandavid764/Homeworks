@@ -1,10 +1,10 @@
 import "./App.css";
-import {ComponentApp} from  "./components/ComponentApp";
+import {Father} from  "./components/Parent.jsx";
 
 function App() {
   return (
     <>
-      <ComponentApp title={"Este es mi titulo"} value={100}/>
+      <Father/>
     </>
   );
 }
