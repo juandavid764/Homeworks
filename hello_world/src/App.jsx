@@ -1,11 +1,15 @@
 import "./App.css";
-import {Father} from  "./components/Parent.jsx";
+import { useState } from "react";
+import { MyContext } from "./Context.jsx";
+import { Dashboard } from "./Dashboard.jsx";
 
 function App() {
+  const [user, setUser] = useState("JLopez");
+
   return (
-    <>
-      <Father/>
-    </>
+    <MyContext.Provider value={{ user, setUser }}>
+      <Dashboard />
+    </MyContext.Provider>
   );
 }
 
