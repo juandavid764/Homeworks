@@ -1,12 +1,19 @@
-import { Link } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 export const Home = () => {
   return (
     <div>
-      <h1>Home</h1>
+      <h1>Home Page</h1>
       <nav>
-        <Link to="/dashboard">Dashboard</Link>
-        <Link to="/login">Login</Link>
+        <ul>
+          <li>
+            <Link to="/album">Go to Album Page</Link>
+          </li>
+          <li>
+            <Link to="/double-linked-list">Go to Double Linked List Page</Link>
+          </li>
+        </ul>
       </nav>
     </div>
   );
