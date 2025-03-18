@@ -1,18 +1,18 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import { Home } from "./pages/Home.jsx";
+import { HomePage } from "./pages/HomePage.jsx";
 import { AlbumPage } from "./pages/AlbumPage.jsx";
-import { DoubleLinkedListPage } from "./pages/DoubleLinkedListPage.jsx";
+import { NavegationPage } from "./pages/NavegationPage.jsx";
 
 function App() {
   return (
     <Router>
       <Routes>
         {/* Rutas publicas  */}
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<HomePage />} />
         <Route path="/album" element={<AlbumPage />} />
-        <Route path="/double-linked-list" element={<DoubleLinkedListPage />} />
+        <Route path="/navigation" element={<NavegationPage />} />
       </Routes>
     </Router>
   );

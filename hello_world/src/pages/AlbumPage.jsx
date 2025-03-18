@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { LinkedList } from '../Models/LinkedList';
+import { Navbar } from '../components/Navbar';
 
 export const AlbumPage = () => {
   const songs = new LinkedList();
-  const [currentSongIndex, setCurrentSongIndex] = useState(0);
   const [currentSong, setCurrentSong] = useState(null);
 
   // Llenar la lista con datos simulados
@@ -17,32 +17,31 @@ export const AlbumPage = () => {
     ];
 
     mockedSongs.forEach(song => songs.append(song));
-    songs.print(); // Imprimir la lista de canciones en la consola
+
     setCurrentSong(songs.head); // Establecer la primera canción como la actual
   }, []);
 
   const handleNext = () => {
-    if (currentSongIndex < songs.size() - 1) {
-      setCurrentSongIndex(currentSongIndex + 1);
-      setCurrentSong(songs.peek(currentSongIndex + 1));
-    }
-  };
-
-  const handlePrevious = () => {
-    if (currentSongIndex > 0) {
-      setCurrentSongIndex(currentSongIndex - 1);
-      setCurrentSong(songs.peek(currentSongIndex - 1));
-    }
+    setCurrentSong(currentSong.next);
   };
 
   return (
-    <>
-      <h1>Album Page</h1>
-      <div>
-        <h2>Current Song: {currentSong ? currentSong.value : 'No song selected'}</h2>
-        <button onClick={handlePrevious} disabled={currentSongIndex === 0}>Previous</button>
-        <button onClick={handleNext} disabled={currentSongIndex === songs.size() - 1}>Next</button>
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 p-4">
+    <Navbar />
+      <h1 className="text-3xl font-bold mb-4">Album Page</h1>
+      <div className="bg-white p-6 rounded-lg shadow-md w-full max-w-md">
+        <h2 className="text-xl font-semibold mb-2">Current Song</h2>
+        <p className="text-gray-700 mb-4">
+          {currentSong ? currentSong.value : 'No song data'}
+        </p>
+        <button
+          onClick={handleNext}
+          className="bg-blue-500 text-white px-4 py-2 rounded disabled:opacity-50"
+          disabled={!currentSong || !currentSong.next}
+        >
+          Next
+        </button>
       </div>
-    </>
+    </div>
   );
 };
