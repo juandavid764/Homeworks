@@ -1,13 +1,12 @@
 import { useState } from "react";
 
-export const Form = ({ people, setReLoad }) => {
+export const Form = ({ numbers, setReLoad }) => {
   const [formData, setFormData] = useState({
-    name: "",
-    withdrawalAmount: 0,
+    num: "",
   });
 
   const handleChange = (e) => {
-    const key = e.target.name;
+    const key = e.target.num;
 
     setFormData({
       ...formData,
@@ -19,7 +18,7 @@ export const Form = ({ people, setReLoad }) => {
     e.preventDefault();
     setReLoad((prev) => !prev);
 
-    people.enqueue(formData);
+    numbers.push(formData);
     console.log(formData);
   };
 
@@ -30,25 +29,11 @@ export const Form = ({ people, setReLoad }) => {
         className="flex flex-col w-1/3 bg-white p-6 rounded-lg shadow-md"
         onSubmit={handleSubmit}
       >
-        <label htmlFor="name" className="text-gray-700 mb-2">
-          Name
-        </label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          value={formData.name}
-          onChange={handleChange}
-          className="mb-4 p-2 border border-gray-300 rounded"
-        />
-        <label htmlFor="withdrawalAmount" className="text-gray-700 mb-2">
-          withdrawal Amount
-        </label>
         <input
           type="number"
-          id="withdrawalAmount"
-          name="withdrawalAmount"
-          value={formData.withdrawalAmount}
+          id="num"
+          name="num"
+          value={formData.num}
           onChange={handleChange}
           className="mb-4 p-2 border border-gray-300 rounded"
         />

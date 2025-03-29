@@ -1,16 +1,16 @@
-import { PersonCard } from "./PersonCard";
+import { NumberCard } from "./NumberCard";
 
-export const View = ({ people }) => {
+export const View = ({ numbers }) => {
   return (
     <div className="flex flex-col items-center justify-start min-h-screen  p-4 h-full">
       <h1 className="text-3xl font-bold mb-4">View</h1>
       <div className="flex flex-col w-full h-1/2 overflow-y-auto">
-        {people.size() ? (
-          people.items.map((person, index) => (
-            <PersonCard key={index} person={person} />
+        {numbers.size() ? (
+          numbers.items.slice().reverse().map((number, index) => (
+            <NumberCard key={index} number={number} />
           ))
         ) : (
-          <p>No people</p>
+          <p>No numbers</p>
         )}
       </div>
     </div>
