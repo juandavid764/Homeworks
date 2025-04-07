@@ -1,49 +1,47 @@
 import { useState } from "react";
 
-export const Form = ({ numbers, setReLoad }) => {
-  const [formData, setFormData] = useState({
-    num: "",
+export const Form = ({ title, onSubmit, button }) => {
+  const [formState, setFormState] = useState({
+    email: "",
+    password: "",
   });
 
-  const handleChange = (e) => {
-    const key = e.target.num;
-
-    setFormData({
-      ...formData,
-      [key]: e.target.value,
-    });
+  const onInputChange = (evt) => {
+    const { name, value } = evt.target;
+    setFormState({ ...formState, [name]: value });
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setReLoad((prev) => !prev);
-
-    numbers.push(formData);
-    console.log(formData);
+  const handleSubmit = (evt) => {
+    evt.preventDefault();
+    onSubmit(formState.email, formState.password);
   };
 
   return (
-    <div className="flex flex-col items-center justify-start min-h-screen w-2xl bg-gray-100 p-4">
-      <h1 className="text-3xl font-bold mb-4 text-gray-800">Form</h1>
-      <form
-        className="flex flex-col w-1/3 bg-white p-6 rounded-lg shadow-md"
-        onSubmit={handleSubmit}
-      >
+    <>
+      <h1>{title}</h1>
+      <hr />
+      <form onSubmit={handleSubmit}>
         <input
-          type="number"
-          id="num"
-          name="num"
-          value={formData.num}
-          onChange={handleChange}
-          className="mb-4 p-2 border border-gray-300 rounded"
+          name="email"
+          type="email"
+          placeholder="email"
+          value={formState.email}
+          onChange={onInputChange}
+          autoComplete="username"
         />
-        <button
-          type="submit"
-          className="bg-gray-800 text-white font-bold  p-2 rounded hover:bg-gray-700"
-        >
-          Add
+        <input
+          name="password"
+          type="password"
+          placeholder="password"
+          value={formState.password}
+          onChange={onInputChange}
+          autoComplete="current-password"
+        />
+        <button type="submit">Continuar</button>
+        <button type="button" onClick={button.onClick}>
+          {button.text}
         </button>
       </form>
-    </div>
+    </>
   );
 };
