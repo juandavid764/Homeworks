@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 
 import { Registro } from "../components/Registro.jsx";
-import { LoginWithEmail } from "../components/LoginWithEmail.jsx";
-import { LoginWithGoogle } from "../components/LoginWithGoogle.jsx";
+import { Login } from "../components/Login.jsx";
 
 export const AuthPage = () => {
   const [authProcess, setAuthProcess] = useState("loginWithEmail");
@@ -10,7 +9,7 @@ export const AuthPage = () => {
   return (
     <>
       {authProcess == "loginWithEmail" ? (
-        <LoginWithEmail changestateAuth={setAuthProcess} />
+        <Login changestateAuth={setAuthProcess} />
       ) : null}
       {authProcess == "loginWithGoogle" ? (
         <LoginWithGoogle changestateAuth={setAuthProcess} />

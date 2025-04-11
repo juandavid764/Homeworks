@@ -23,13 +23,20 @@ export const authSlice = createSlice({
       state.displayname = action.payload.displayName;
     },
 
-    logout: (state, action) => {},
+    logout: (state, action) => {
+      state.status = "not-authenticated";
+      state.uid = null;
+      state.email = null;
+      state.displayname = null;
+      state.photoURL = null;
+      state.errorMessage = action.payload?.errorMessage;
+    },
     checkingCredentials: (state, action) => {
       console.log("cehcking");
     },
   },
 });
 
-export const { register, logout, checkingCredentials } = authSlice.actions;
+export const { login, register, logout, checkingCredentials } = authSlice.actions;
 
 export default authSlice.reducer;

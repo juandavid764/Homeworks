@@ -1,14 +1,17 @@
 import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 import { loginAuth } from "../store/slices/Auth/thunks.js";
 
 import { Form } from "./Form.jsx";
 
-export const LoginWithEmail = ({changestateAuth}) => {
+export const Login = ({changestateAuth}) => {
+
+  const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const handleLoginEmail = (email, password) => {
-    dispatch(loginAuth(email, password));
+    dispatch(loginAuth(email, password, navigate));
   };
 
   let registerButton = {

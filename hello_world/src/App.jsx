@@ -1,4 +1,5 @@
 import "./App.css";
+import "./index.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import { HomePage } from "./pages/HomePage.jsx";
@@ -13,9 +14,14 @@ function App() {
         <Route path="/" element={<HomePage />} />
 
         {/* Rutas privadas */}
-        <Route element={<PrivateRoute />}>
-          <Route path="/profile" element={<ProfilePage />} />
-        </Route>
+        <Route
+          path="/profile"
+          element={
+            <PrivateRoute>
+              <ProfilePage />
+            </PrivateRoute>
+          }
+        />
       </Routes>
     </Router>
   );
