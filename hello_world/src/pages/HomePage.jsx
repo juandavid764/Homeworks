@@ -1,7 +1,7 @@
-import { AuthPage } from "./AuthPage";
+import { Crud } from "../components/Crud";
 
 export const HomePage = () => {
   return (
-    <AuthPage />
+    <Crud />
   );
 };
