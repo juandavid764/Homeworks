@@ -1,7 +1,7 @@
-import { Crud } from "../components/Crud";
+import {DataComponent} from "../components/DataComponent.jsx";
 
 export const HomePage = () => {
   return (
-    <Crud />
+    <DataComponent />
   );
 };
