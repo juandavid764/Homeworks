@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Sidebar } from "../components/Sidebar.jsx";
 import { View } from "../components/view.jsx";
 
 export const HomePage = () => {
@@ -7,7 +6,6 @@ export const HomePage = () => {
 
   return (
     <div className="flex">
-      <Sidebar setComponent={setComponent} />
       <View Component={component} />
     </div>
   );
