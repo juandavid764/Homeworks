@@ -1,0 +1,72 @@
+@use "sass:map";
+@use "sass:color";
+
+// Colors
+$primary-dark: #1a1a1a;
+$secondary-dark: #2d2d2d;
+$accent-color: #646cff;
+$text-light: #ffffff;
+$text-muted: #888888;
+
+// Button Colors
+$button-colors: (
+  'subtract': (#ef4444, #b91c1c),
+  'reset': (#eab308, #a16207),
+  'add': (#22c55e, #15803d)
+);
+
+// Typography
+$font-sizes: (
+  'small': 0.875rem,
+  'base': 1rem,
+  'large': 1.25rem,
+  'xlarge': 1.5rem,
+  'xxlarge': 2rem
+);
+
+// Spacing
+$spacing: (
+  'xs': 0.25rem,
+  'sm': 0.5rem,
+  'md': 1rem,
+  'lg': 1.5rem,
+  'xl': 2rem
+);
+
+// Breakpoints
+$breakpoints: (
+  'sm': 640px,
+  'md': 768px,
+  'lg': 1024px,
+  'xl': 1280px
+);
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin responsive($breakpoint) {
+  @if map.has-key($breakpoints, $breakpoint) {
+    @media (min-width: map.get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+}
+
+@mixin button-base {
+  color: $text-light;
+  font-weight: bold;
+  padding: map.get($spacing, 'sm') map.get($spacing, 'md');
+  border-radius: 0.25rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+} 

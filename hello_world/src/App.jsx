@@ -1,17 +1,11 @@
 import "./App.css";
-import "./index.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
-import { HomePage } from "./pages/HomePage.jsx";
+import FirstApp from  "./components/FirstApp";
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        {/* Rutas publicas  */}
-        <Route path="/" element={<HomePage />} />
-      </Routes>
-    </Router>
+    <>
+      <FirstApp title={"Este es mi titulo"} value={100}/>
+    </>
   );
 }
 
