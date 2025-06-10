@@ -42,7 +42,61 @@ Cada desafío está organizado en una rama (branch) específica para mantener el
    ```
 
 ## 📖 Desafío 01: Arrays
-Investigar y aplicar todas las funciones de array. Comentar cada función e imprimir en consola un ejemplo de implementación
+Investigar, implementar y dominar **todas las funciones nativas de JavaScript para arrays**, creando ejemplos prácticos que demuestren su uso y funcionalidad.
+
+### 📋 Descripción Detallada
+Crear un archivo JavaScript que contenga la implementación y demostración de todas las funciones de array, incluyendo:
+- **Comentarios explicativos** para cada función
+- **Ejemplos prácticos** de implementación
+- **Salida en consola** que muestre los resultados
+- **Casos de uso reales** con datos significativos
+
+### 🛠️ Funciones a Implementar
+
+#### **Funciones de Iteración:**
+- `forEach()` - Ejecutar función para cada elemento
+- `map()` - Transformar elementos y crear nuevo array
+- `filter()` - Filtrar elementos según condición
+- `reduce()` / `reduceRight()` - Reducir array a un único valor
+
+#### **Funciones de Búsqueda:**
+- `find()` / `findLast()` - Encontrar elemento que cumpla condición
+- `findIndex()` / `findLastIndex()` - Encontrar índice de elemento
+- `indexOf()` / `lastIndexOf()` - Buscar índice de valor específico
+- `includes()` - Verificar si contiene elemento
+
+#### **Funciones de Verificación:**
+- `some()` - Verificar si algún elemento cumple condición
+- `every()` - Verificar si todos los elementos cumplen condición
+
+#### **Funciones de Modificación:**
+- `push()` / `pop()` - Agregar/quitar del final
+- `unshift()` / `shift()` - Agregar/quitar del inicio
+- `splice()` - Modificar contenido del array
+- `sort()` - Ordenar elementos
+- `reverse()` - Invertir orden
+- `fill()` - Llenar con valor estático
+- `copyWithin()` - Copiar elementos dentro del mismo array
+
+#### **Funciones de Creación:**
+- `concat()` - Unir arrays
+- `slice()` - Extraer porción del array
+- `flat()` - Aplanar arrays anidados
+- `flatMap()` - Mapear y aplanar
+
+#### **Funciones de Conversión:**
+- `join()` - Unir elementos en string
+- `toString()` - Convertir a string
+- `toLocaleString()` - Convertir con formato local
+
+#### **Funciones de Iteradores:**
+- `entries()` - Obtener pares [índice, valor]
+- `keys()` - Obtener índices
+- `values()` - Obtener valores
+
+#### **Funciones de Acceso:**
+- `at()` - Acceder a elemento por índice
+- `constructor` - Obtener constructor del array
 
 ## 📚 Recursos de Aprendizaje
 
