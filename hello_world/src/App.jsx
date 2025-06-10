@@ -5,8 +5,7 @@ function App() {
   return (
     <>
       <h1>Hola mundo!</h1>
-      <h2>Bienvenido</h2>
-      <FirstApp title={"Este es mi titulo"} sum={23}/>
+      <FirstApp title={"Este es mi titulo"} sum={10}/>
     </>
   );
 }
