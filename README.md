@@ -20,26 +20,6 @@ Cada desafío está organizado en una rama (branch) específica para mantener el
 | `01_arrays` | Arrays | Investigar y usar todas las funciones de arrays | ✅ Completado |
 | `02_objects` | Objetos | Manipulación avanzada de objetos y métodos | 🔄 Próximo |
 
-## 🚀 Cómo Empezar
-
-### Requisitos Previos
-- Node.js (versión 14 o superior)
-- Git
-- Editor de código (VS Code recomendado)
-- Conocimientos básicos de JavaScript
-
-### Configuración Inicial
-
-1. **Clona el repositorio:**
-   ```bash
-   git clone <URL_DEL_REPOSITORIO>
-   cd React-practice
-   ```
-
-2. **Instala las dependencias (cuando sea necesario):**
-   ```bash
-   npm install
-   ```
 
 ## 📖 Desafío 01: Arrays
 Investigar, implementar y dominar **todas las funciones nativas de JavaScript para arrays**, creando ejemplos prácticos que demuestren su uso y funcionalidad.
@@ -117,10 +97,3 @@ Crear un archivo JavaScript que contenga la implementación y demostración de t
 - **Comenta tu código:** Explica tu lógica para futura referencia
 - **Experimenta:** Prueba diferentes enfoques para el mismo problema
 - **Documenta tu progreso:** Mantén notas de lo que aprendes
-
-### Metodología de Trabajo
-1. **Investigación:** Lee la documentación oficial
-2. **Implementación:** Escribe código funcional
-3. **Pruebas:** Verifica que todo funcione correctamente
-4. **Documentación:** Comenta y explica tu código
-5. **Revisión:** Revisa y optimiza tu solución
